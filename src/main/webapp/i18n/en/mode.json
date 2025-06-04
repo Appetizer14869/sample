@@ -1,0 +1,27 @@
+{
+  "sampleApp": {
+    "mode": {
+      "home": {
+        "title": "Modes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Mode",
+        "createOrEditLabel": "Create or edit a Mode",
+        "search": "Search for Mode",
+        "notFound": "No Modes found"
+      },
+      "created": "A new Mode is created with identifier {{ param }}",
+      "updated": "A Mode is updated with identifier {{ param }}",
+      "deleted": "A Mode is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mode {{ id }}?"
+      },
+      "detail": {
+        "title": "Mode"
+      },
+      "id": "ID",
+      "name": "Name",
+      "handle": "Handle",
+      "user": "User"
+    }
+  }
+}

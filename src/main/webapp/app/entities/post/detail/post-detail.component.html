@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (post(); as postRef) {
+      <div>
+        <h2 data-cy="postDetailsHeading"><span jhiTranslate="sampleApp.post.detail.title">Post</span></h2>
+
+        <hr />
+
+        <jhi-alert-error />
+
+        <jhi-alert />
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ postRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="sampleApp.post.title">Title</span></dt>
+          <dd>
+            <span>{{ postRef.title }}</span>
+          </dd>
+          <dt><span jhiTranslate="sampleApp.post.content">Content</span></dt>
+          <dd>
+            <span>{{ postRef.content }}</span>
+          </dd>
+          <dt><span jhiTranslate="sampleApp.post.date">Date</span></dt>
+          <dd>
+            <span>{{ postRef.date | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="sampleApp.post.mode">Mode</span></dt>
+          <dd>
+            @if (post()!.mode) {
+              <div>
+                <a [routerLink]="['/mode', post()!.mode?.id, 'view']">{{ postRef.mode?.name }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="sampleApp.post.tags">Tags</span></dt>
+          <dd>
+            @for (tags of postRef.tags; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/tag', tags.id, 'view']">{{ tags?.name }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/post', postRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
