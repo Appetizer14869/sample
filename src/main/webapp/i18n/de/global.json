@@ -8,7 +8,9 @@
       "entities": {
         "main": "Entitäten",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "adminAuthority": "Authority"
+        "mode": "Mode",
+        "post": "Post",
+        "tag": "Tag"
       },
       "account": {
         "main": "Zugang",

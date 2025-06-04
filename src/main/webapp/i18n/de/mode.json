@@ -1,0 +1,27 @@
+{
+  "sampleApp": {
+    "mode": {
+      "home": {
+        "title": "Modes",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Mode erstellen",
+        "createOrEditLabel": "Mode erstellen oder bearbeiten",
+        "search": "Suche nach Mode",
+        "notFound": "Keine Modes gefunden"
+      },
+      "created": "Mode erstellt mit ID {{ param }}",
+      "updated": "Mode aktualisiert mit ID {{ param }}",
+      "deleted": "Mode gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Mode {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Mode"
+      },
+      "id": "ID",
+      "name": "Name",
+      "handle": "Handle",
+      "user": "User"
+    }
+  }
+}
